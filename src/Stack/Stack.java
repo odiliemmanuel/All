@@ -16,6 +16,7 @@ public class Stack {
 
 
     public int size() {
+
         return index + 1;
     }
 
@@ -23,6 +24,7 @@ public class Stack {
         if(isEmpty()){
            throw new IllegalArgumentException("Cannot remove element from an empty collection");
         }
+
         return index --;
 
     }
