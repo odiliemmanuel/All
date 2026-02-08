@@ -10,12 +10,14 @@ public class StackTest {
 
     @BeforeEach
     public void startEachMethodWithThis(){
+
         stack = new Stack();
     }
 
     @Test
     public void testThatStackIsEmpty() {
-        assertTrue(stack.isEmpty());
+        assertTrue(
+                stack.isEmpty());
     }
 
 

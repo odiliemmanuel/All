@@ -10,12 +10,14 @@ public class QueueTest {
 
     @BeforeEach
     public void startEachMethodWithThis(){
+
         queue = new QueuePractice();
     }
 
 
     @Test
     public void testThatQueueIsEmpty(){
+
         assertTrue(queue.isEmpty());
     }
 
