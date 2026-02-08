@@ -6,6 +6,7 @@ public class Stack {
     private int index = -1;
 
     public boolean isEmpty() {
+
         return index == -1;
     }
 
