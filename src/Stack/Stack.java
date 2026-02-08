@@ -31,6 +31,7 @@ public class Stack {
     }
 
     public int capacity() {
+
         return stack.length;
     }
 
