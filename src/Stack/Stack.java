@@ -5,6 +5,7 @@ public class Stack {
     String [] stack = new String[7];
     private int index = -1;
 
+
     public boolean isEmpty() {
 
         return index == -1;

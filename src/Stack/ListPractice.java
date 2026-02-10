@@ -10,7 +10,12 @@ public class ListPractice {
 
     public boolean isEmpty() {
 
-        return index == - 1;
+        if (index == -1) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 
@@ -27,8 +32,13 @@ public class ListPractice {
     public void addTo(int position, String input){
         if(size == list.length){
             capacity *= capacity;
+            if(list[position] != null){
+                position ++;
+                size --;
+                list[position] = input;
+            }
 
-            list[position] = input;
+
         }
         size ++;
     }
@@ -41,26 +51,38 @@ public class ListPractice {
 
 
     public String remove(String input) {
-        if(isEmpty()){
-           throw new IllegalArgumentException("Operation cannot work for Empty list");
+
+        int size = size();
+        if(size == 0){
+           return "-1";
 
         }
 
-        for(int count = 0; count < size; count ++) {
-            String result = "";
-            if (list[count].equals(input)){
-                result = list[count];
+
+        for (int count = 0; count < size; count++) {
+
+
+            if (list[count] == (input)) {
+                input = list[count];
             }
 
             size -= 1;
-            return result;
+            return input;
         }
+
+
 
         return null;
 
     }
 
+
+
 //    public String removeFrom(int indexInput) {
 //
+//        String result = list[indexInput];
+//        size --;
+//
+//        return result;
 //    }
 }

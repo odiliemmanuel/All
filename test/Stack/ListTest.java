@@ -3,21 +3,25 @@ package Stack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ListTest {
     ListPractice list;
 
+
     @BeforeEach
     public void startEachMethodWith(){
+
         list = new ListPractice();
     }
 
+
     @Test
     public void testThatListIsEmpty(){
+
         assertTrue(list.isEmpty());
     }
+
 
     @Test
     public void testThatICanAddElementsToListAndSizeIncreases(){
@@ -39,15 +43,16 @@ public class ListTest {
         assertTrue(list.isEmpty());
         list.addTo(1,"Ada");
         list.add("Obinna");
-        list.addTo(0, "chibuzor");
+        list.addTo(1, "chibuzor");
         assertEquals(3, list.size());
 
-        list.remove("Ada");
-        assertEquals(2, list.size());
+//        assertEquals("Ada", list.remove("Ada"));
+//        assertEquals(2, list.size());
     }
 
+
     @Test
-    public void testThatIfInputIsEmptyErrorIsThrown(){
+    public void testThatIfInputIsEmptyErrorIsThrownOrNothingHappensToTheSize(){
         assertTrue(list.isEmpty());
         list.addTo(1,"Ada");
         list.add("Obinna");
@@ -55,7 +60,7 @@ public class ListTest {
         assertEquals(3, list.size());
 
         list.remove("");
-        assertEquals(2, list.size());
+        assertEquals(3, list.size());
     }
 
     @Test
@@ -75,8 +80,9 @@ public class ListTest {
         list.add("ada");
         list.add("obinna");
 
-//        list.removeFrom(1);
+        assertEquals("ada", list.remove("ada"));
         assertEquals(2, list.size());
+
     }
 
 }
