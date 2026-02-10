@@ -127,6 +127,6 @@ public class ListTest {
 //
 //        assertEquals(3, list.size());
 //        assertEquals(true, list.contains("Flash"));
-//    }
+    }
 
 
