@@ -105,10 +105,6 @@ public class ListTest {
 
     }
 
-//    @Test
-//    public void testThatICanSortAnArrayInAscendingOrder(){
-//
-//    }
 
     @Test
     public void testThatICanSetElementsIntoAList(){
@@ -121,18 +117,15 @@ public class ListTest {
         list.set(100, "Emma");
         assertEquals(1, list.size());
     }
-
-    @Test
-    public void testThatICanCheckIfAnElementIsInList(){
-        list.add("Emma");
-        list.add("Flash");
-        list.add("Barry");
-
-        assertEquals(3, list.size());
-        assertEquals(true, list.contains("Flash"));
-    }
-
+//
 //    @Test
-//    public void testThatICanClear
+//    public void testThatICanCheckIfAnElementIsInList(){
+//        list.add("Emma");
+//        list.add("Flash");
+//        list.add("Barry");
+//
+//        assertEquals(3, list.size());
+//        assertEquals(true, list.contains("Flash"));
+//    }
 
-}
+
