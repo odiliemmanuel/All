@@ -30,6 +30,7 @@ public class ListTest {
         assertEquals(2, list.size());
     }
 
+
     @Test
     public void testThatICanAddANewElementViaSpecificationOfIndex(){
         assertTrue(list.isEmpty());
