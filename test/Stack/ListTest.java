@@ -75,14 +75,64 @@ public class ListTest {
     }
 
     @Test
-    public void tesThatICanRemoveElementViaIndex(){
+    public void tesThatICanRemoveElementViaElement_AndSizeReduces(){
         list.add("obi");
         list.add("ada");
         list.add("obinna");
 
-        assertEquals("ada", list.remove("ada"));
+        list.remove("");
+        assertEquals(3, list.size());
+
+    }
+
+    @Test
+    public void testThatIfNoElementInList_ReturnEmpty(){
+        assertEquals("Empty", list.remove("age"));
+        assertEquals(0, list.size());
+    }
+
+    @Test
+    public void testThatICanRemoveViaIndex_AndSizeReduces(){
+        list.add("Emmanuel");
+        list.add("Brenda");
+        list.add("Christain");
+        list.add("Peace");
+
+        list.removeFrom(1);
+        list.removeFrom(3);
+
         assertEquals(2, list.size());
 
     }
+
+//    @Test
+//    public void testThatICanSortAnArrayInAscendingOrder(){
+//
+//    }
+
+    @Test
+    public void testThatICanSetElementsIntoAList(){
+        list.set(2, "Emma");
+        assertEquals(1, list.size());
+    }
+
+    @Test
+    public void testThatICanSetToAnIndexGraterThanTheSpecifiedArrayLength(){
+        list.set(100, "Emma");
+        assertEquals(1, list.size());
+    }
+
+    @Test
+    public void testThatICanCheckIfAnElementIsInList(){
+        list.add("Emma");
+        list.add("Flash");
+        list.add("Barry");
+
+        assertEquals(3, list.size());
+        assertEquals(true, list.contains("Flash"));
+    }
+
+//    @Test
+//    public void testThatICanClear
 
 }

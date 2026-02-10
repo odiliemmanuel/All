@@ -1,6 +1,6 @@
 package Stack;
 
-public class QueuePractice<Odils> {
+public class Queue<Odils> {
     private int index = -1;
 //    @SuppressWarnings("unchecked")
     private Odils[] queue = (Odils[]) new Object[7] ;

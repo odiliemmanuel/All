@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class QueueTest {
-    QueuePractice queue;
+    Queue queue;
 
     @BeforeEach
     public void startEachMethodWithThis(){
 
-        queue = new QueuePractice();
+        queue = new Queue();
     }
 
 

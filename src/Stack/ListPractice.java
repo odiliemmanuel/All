@@ -10,7 +10,7 @@ public class ListPractice {
 
     public boolean isEmpty() {
 
-        if (index == -1) {
+        if(index == -1) {
             return true;
         }
         else {
@@ -20,14 +20,19 @@ public class ListPractice {
 
 
     public void add(String input) {
+
         if(size == list.length) {
+
             capacity *= capacity;
-
             list[index += 1] = input;
-
         }
+
         size++;
+
+
+
     }
+
 
     public void addTo(int position, String input){
         if(size == list.length){
@@ -52,37 +57,71 @@ public class ListPractice {
 
     public String remove(String input) {
 
-        int size = size();
         if(size == 0){
-           return "-1";
+           return "Empty";
+
+        } else if (input.equals("")) {
+
+            return "Invalid";
 
         }
 
-
-        for (int count = 0; count < size; count++) {
-
+        for(int count = 0; count < size; count++) {
+            String result = "";
 
             if (list[count] == (input)) {
-                input = list[count];
+                result = list[count];
+
             }
+            --size;
+            return result;
 
-            size -= 1;
-            return input;
         }
-
-
 
         return null;
 
     }
 
 
+    public String removeFrom(int input) {
+        if(size == 0){
+            return "Empty";
+        }
+        else if (input == 0) {
 
-//    public String removeFrom(int indexInput) {
-//
-//        String result = list[indexInput];
-//        size --;
-//
-//        return result;
-//    }
+            return "Invalid";
+
+        }
+
+        for(int count = 0; count < size; count ++){
+            String result = "";
+            if(input == count){
+                result = list[count];
+            }
+            size --;
+            return result;
+        }
+
+        return null;
+    }
+
+
+    public void set(int index, String input) {
+        for(int count = 0; count < list.length; count ++){
+            if(count == index){
+                list[count] = input;
+            }
+
+        }
+        size ++;
+    }
+
+    public boolean contains(String input) {
+       for(String count : list){
+           if(input.equals(count)){
+               return true;
+           }
+       }
+       return false;
+    }
 }
