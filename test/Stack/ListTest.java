@@ -118,7 +118,7 @@ public class ListTest {
         list.set(100, "Emma");
         assertEquals(1, list.size());
     }
-//
+}
 //    @Test
 //    public void testThatICanCheckIfAnElementIsInList(){
 //        list.add("Emma");
